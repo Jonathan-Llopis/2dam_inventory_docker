@@ -6,14 +6,14 @@ services:
     depends_on:
       - mysql
       - redis
-    container_name: 2dam-inventory-webserver
+    container_name: 2dam_inventory-webserver
     working_dir: /web
     command: pm2-runtime start pm2.json
     volumes:
       - ./2dam_inventory:/web
   mysql:
     image: mysql:8.0.1
-    container_name: 2dam-inventory-mysql
+    container_name: 2dam_inventory-mysql
     #restart: always
     environment:
      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
@@ -23,4 +23,4 @@ services:
      - ./mysql.cnf:/etc/mysql/my.cnf
   redis: 
     image: 'redis'
-    container_name: 2dam-inventory-redis
+    container_name: 2dam_inventory-redis
