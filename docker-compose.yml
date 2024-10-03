@@ -6,14 +6,14 @@ services:
     depends_on:
       - database
       - redis
-    container_name: 2dam_inventory-webserver
+    container_name: 2da_inventory-webserver
     working_dir: /web
     command: pm2-runtime start pm2.json
     volumes:
       - ./2dam_inventory:/web
   database:
     image: yobasystems/alpine-mariadb:10.11.8
-    container_name: 2dam-inventory-db
+    container_name: 2dam_inventory-db
     #restart: always
     environment:
      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
