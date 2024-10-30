@@ -11,6 +11,11 @@ services:
     command: pm2-runtime start pm2.json
     volumes:
       - ./2dam_inventory:/web
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+
   database:
     image: yobasystems/alpine-mariadb:10.11.8
     container_name: 2dam_inventory-db
