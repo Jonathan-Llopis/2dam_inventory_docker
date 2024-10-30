@@ -6,7 +6,7 @@ services:
     depends_on:
       - database
       #- redis
-    container_name: 2dam-inventory-webserver
+    container_name: 2dam_inventory-webserver
     working_dir: /web
     command: pm2-runtime start pm2.json
     volumes:
