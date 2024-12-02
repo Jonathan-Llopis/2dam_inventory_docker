@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@pdfme/schemas": "^5.2.7"
+  }
+}
