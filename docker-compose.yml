@@ -30,7 +30,6 @@ services:
       - TZ=UTC
     volumes:
      - ./data/db/mysql:/var/lib/mysql
-     - ./src/utils/labelsData:/app/src/utils/labelsData
   #    - ./mysql.cnf:/etc/mysql/my.cnf
   # redis: 
   #   image: 'redis'
